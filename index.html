@@ -8,6 +8,15 @@
   <div id="app">
     {{ message }}
     <input v-model="message" />
+
+    <ol>
+      <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id"
+      >
+      </todo-item>
+    </ol>
   </div>
 
   <div id="app-2">
